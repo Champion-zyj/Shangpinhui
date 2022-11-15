@@ -4,7 +4,7 @@
               <li class="yui3-u-1-5" v-for="item in list" :key="item.id">
                 <div class="list-wrap">
                   <div class="p-img"  @click="$router.push({name:'detail',params:{skuid:item.id}})">
-                    <a target="_blank"><img :src="item.defaultImg" /></a>
+                    <a target="_blank"><img v-lazy="item.defaultImg" /></a>
                   </div>
                   <div class="price">
                     <strong>

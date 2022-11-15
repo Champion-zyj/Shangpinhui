@@ -5,7 +5,13 @@ import typeNav from '@/pages/home/typeNav'
 import store from '@/store'
 import Carousel from '@/components/Carousel'
 import Pagination from '@/components/Pagination'
-
+import VueLazyload from 'vue-lazyload'
+import atm from '@/assets/1.gif'
+Vue.use(VueLazyload, {
+  preLoad: 1.3,
+  loading: atm,
+  attempt: 1
+})
 import ElementUI from 'element-ui'
 Vue.use(ElementUI)
 import nprogress from 'nprogress'
